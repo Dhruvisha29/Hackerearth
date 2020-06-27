@@ -1,0 +1,47 @@
+//Java Solution of array insert
+
+import java.util.*;
+
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int length = sc.nextInt();
+        int query = sc.nextInt();
+        int arr[] = new int[length];  //arr for taking array as input
+        int queryar[] = new int[3];   //array for query as input
+        int sum=0;
+        int i=0,j=0;
+        for(i=0;i<length;i++)     //array insertion
+        {
+            arr[i]=sc.nextInt();
+        }
+        while(query>0)
+        {
+            sum=0;
+            for(j=0;j<3;j++)      //query input
+            {
+                queryar[j]=sc.nextInt();
+            }
+            if(queryar[0]==1)      //checking query for first case
+            {
+                arr[queryar[1]]=queryar[2];   
+            }
+            else if(queryar[0]==2)  //checking query for second case
+            {
+                int a;
+                int b=queryar[2];
+                for(a=queryar[1];a<=b;a++)
+                {
+                    sum+=arr[a];
+                }  
+                System.out.println(sum);      
+            }
+            else
+            {
+                System.out.println("-1");
+            }
+            query--;
+        }
+
+    }
+}
