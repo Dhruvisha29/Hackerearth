@@ -1,0 +1,31 @@
+//java solution of rain sound
+
+import java.util.*;
+
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        Scanner sc = new Scanner(System.in);
+        int testcase = sc.nextInt();
+        while(testcase>0)
+        {
+            int l,r,s;
+            l=sc.nextInt();
+            r=sc.nextInt();
+            s=sc.nextInt();
+
+            l=(l-1)/s+1;
+            r=r/s;
+
+        if(l>r)
+        {
+           System.out.println("-1 -1");
+        }
+        else
+        {
+            System.out.println(l+" "+r);
+        }
+          testcase--;
+        }
+
+    }
+}
