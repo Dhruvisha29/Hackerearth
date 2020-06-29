@@ -13,7 +13,7 @@ class TestClass {
             r=sc.nextInt();
             s=sc.nextInt();
 
-            l=(l-1)/s+1;
+            l=((l-1)/s)+1;
             r=r/s;
 
         if(l>r)
