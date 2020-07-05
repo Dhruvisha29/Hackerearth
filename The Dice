@@ -1,0 +1,28 @@
+
+import java.util.*;
+
+
+class TestClass {
+    public static void main(String args[] ) throws Exception {
+        
+        Scanner sc = new Scanner(System.in);
+        String s = sc.nextLine(); //Taking String as input
+        int count=0;
+        for(int i=0;i<s.length();i++)
+        {
+            if(s.charAt(i)!='6')
+            {
+                count++;
+            }
+        }
+        if(s.charAt(s.length()-1)=='6') //If the last entry of the string is 6 then the girl has to role die again but as it is the last entry it means die is not rolled and hence the sequence is invalid
+        {
+            System.out.println("-1");
+        }
+        else
+        {
+            System.out.println(count);
+        }
+
+    }
+}
